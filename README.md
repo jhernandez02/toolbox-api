@@ -4,7 +4,7 @@
 - http://165.22.231.112/api/iecho?texto=somos
 
 ### Librerías Utilizadas
-- Node + Express
+- Node + Express + Cors
 - Mocha
 - Chai
 - SuperTest
