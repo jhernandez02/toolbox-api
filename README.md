@@ -8,6 +8,7 @@
 - Mocha
 - Chai
 - SuperTest
+- StandarJs
 
 ### Instalación
 >git clone https://github.com/jhernandez02/toolbox-api.git
