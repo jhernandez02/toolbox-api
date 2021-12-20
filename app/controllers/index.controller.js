@@ -4,11 +4,12 @@ const controller = {
     if (!text || text === '') {
       res.status(400).json({ error: 'no text' })
     } else {
-      const nText = text.toLowerCase()
-      const invert = nText.split('').reverse().join('')
-      const isPalindrome = (nText === invert)
+      const reverseText = text.split('').reverse().join('')
+      const cleanText = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Z0-9]/ig, '').toLowerCase()
+      const checkReverse = cleanText.split('').reverse().join('')
+      const isPalindrome = (cleanText === checkReverse)
       res.json({
-        text: invert,
+        text: reverseText,
         palindrome: isPalindrome
       })
     }
